@@ -1,0 +1,325 @@
+/* Library Styles */
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbar if needed */
+    scroll-behavior: smooth; /* If you intend to use smooth scrolling */
+}
+
+body {
+    font-family: poppins; /* Assuming 'poppins' is defined or linked */
+    margin: 0;
+    padding: 0;
+    color: rgb(33, 33, 33); /* Default text color */
+    font-size: 16px;
+    min-height: 100vh; /* Ensure body is at least viewport height */
+    display: flex;          /* Enable flexbox for body */
+    flex-direction: column; /* Stack body content vertically */
+    overflow-x: hidden;    /* Prevent horizontal overflow on body */
+}
+
+
+/* Navbar Styles (copied from style.css) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white; /* Added background color for header */
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo a {
+    display: block;
+    text-decoration: none;
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 1.5px 1.5px 0;
+    display: inline-block;
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.header-actions button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: transparent;
+}
+
+.header-actions .start-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+
+.library-gallery {
+    flex: 1; /* Allow gallery section to take remaining vertical space */
+    position: relative;
+    height: calc(100vh - 90px); /* Subtract header height (adjust 90px if header is taller) */
+    overflow: hidden;
+    padding: 300px;
+}
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none;
+}
+
+#image-track > .image {
+    width: 80vmin;
+    height: 40vmin;
+    object-fit: cover;
+    object-position: 100% center;
+}
+
+  /* -- YouTube Link Styles -- */
+
+  body.menu-toggled > .meta-link > span {
+    color: rgb(30, 30, 30);
+  }
+
+  #source-link {
+    bottom: 60px;
+  }
+
+  #source-link > i {
+    color: rgb(94, 106, 210);
+  }
+
+  #yt-link > i {
+    color: rgb(239, 83, 80);
+  }
+
+  .meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    bottom: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: inline-flex;
+    gap: 5px;
+    left: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    text-decoration: none;
+    transition: background-color 400ms, border-color 400ms;
+    z-index: 10000;
+  }
+
+  .meta-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border:  1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .meta-link > i, .meta-link > span {
+    height: 20px;
+    line-height: 20px;
+  }
+
+  .meta-link > span {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+  }
+
+/* Footer Styles (copied from style.css) */
+.site-footer {
+    background-image: linear-gradient(to top, rgba(230, 127, 38, 0.8), rgba(255, 255, 255, 0.575));
+    padding: 80px 0 0;
+    border-top: 1px solid #e0e0e0;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    z-index: 100;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 16px;
+}
+
+.footer-column ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.subscribe-form button {
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.subscribe-notice {
+    font-size: 12px;
+    color: #666;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e0e0e0;
+    padding: 24px 0;
+}
+
+.footer-bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icon {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
